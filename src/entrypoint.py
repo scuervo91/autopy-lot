@@ -172,9 +172,9 @@ def main():
         output_files = convert_files(files, command)
         if output_files:
             # Commit changes
-            commit_changes(output_files)  # add and commit the changes
+            # commit_changes(output_files)  # add and commit the changes
             # Push
-            push_changes()  # push the changes back
+            # push_changes()  # push the changes back
         else:
             print('Nothing to add. Nothing to update!')
     else:
