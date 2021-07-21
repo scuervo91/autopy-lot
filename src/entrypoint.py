@@ -175,6 +175,7 @@ def main():
             # commit_changes(output_files)  # add and commit the changes
             # Push
             # push_changes()  # push the changes back
+            print('_')
         else:
             print('Nothing to add. Nothing to update!')
     else:
