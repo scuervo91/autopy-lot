@@ -139,8 +139,14 @@ def push_changes():
     """
     set_url = f'git remote set-url origin https://x-access-token:{GITHUB_TOKEN}@github.com/{TARGET_REPOSITORY}'
     git_push = f'git push origin {TARGET_BRANCH}'
-    sp.call(set_url, shell=True)
-    sp.call(git_push, shell=True)
+    
+    try:
+        sp.call(set_url, shell=True)
+        sp.call(git_push, shell=True)
+    except Exception as e:
+        print(e)
+    else:
+        print('Pushed command Called no errors')
 
 
 def main():
